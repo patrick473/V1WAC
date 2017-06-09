@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+      <link rel="stylesheet" href="css/manageCountries.css">
+</head>
+
+    <body >
+      <div class="row">
+      <div class="col s3 collection side-nav fixed"id="countryCollection">
+
+  </div>
+  <div class="col s9 offset-s3">
+
+    <ul class="tabs">
+
+      <li class="tab col s4"><a href="#insert">Insert</a></li>
+      <li class="tab col s4"><a href="#update">Update/Delete</a></li>
+      <li class="tab col s4 "><a href="#search">Search/Filter</a></li>
+
+    </ul>
+
+
+
+   <div  class="col s9" id="insert">
+
+
+       <form id="inputForm">
+
+
+               <div class="row">
+               <div class="input-field col s3">
+                 <input  id="code" name="code"type="text" class="validate">
+                 <label for=code>iso3Code</label>
+               </div>
+               <div class="row">
+               <div class="input-field col s3">
+                 <input  id="iso2" name="iso2"type="text" class="validate">
+                 <label for=iso2>iso2Code</label>
+               </div>
+               <div class="input-field col s3">
+                 <input id="name" name="name" type="text" class="validate">
+                 <label for="name">Name</label>
+               </div>
+             </div>
+                <div class="row">
+               <div class="input-field col s9">
+                 <input  id="capital" name="capital"type="text" class="validate">
+                 <label for=code>Capital</label>
+               </div>
+             </div>
+
+                <div class="row">
+               <div class="input-field col s9">
+                 <input id="continent" name="continent"type="text" class="validate">
+                 <label for="name">Continent</label>
+               </div>
+             </div>
+
+                <div class="row">
+               <div class="input-field col s6">
+                  <input id="region" name="region" type="text" class="validate">
+                  <label for="name">Region</label>
+                </div>
+
+                <div class="input-field col s3">
+                  <input  id="surfaceArea" name="surface" type="text" class="validate">
+                  <label for=code>Surface Area</label>
+                </div>
+              </div>
+                 <div class="row">
+
+                <div class="input-field col s9">
+                  <input id="population" name="population"type="text" class="validate">
+                  <label for="name">Population</label>
+                </div>
+
+              </div>
+              <div class="row">
+             <div class="input-field col s3">
+                <input id="government" name="government" type="text" class="validate">
+                <label for="name">Government</label>
+              </div>
+
+              <div class="input-field col s3">
+                <input  id="lat" name="lat" type="text" class="validate">
+                <label for=code>lat</label>
+              </div>
+
+
+
+              <div class="input-field col s3">
+                <input id="lng" name="lng" type="text" class="validate">
+                <label for="name">long</label>
+              </div>
+
+            </div>  <div class="row">
+                <button class="btn waves-effect waves-light" id="insertButton" name="action">Submit
+
+   </button>
+             </div>
+</form>
+
+   </div>
+</div>
+   <div class="col s9 "id="update">
+
+     <div class="row">
+       <h2 id="codeUpdate">Selected: None</h2>
+   </div>
+   <form id="updateForm">
+
+
+     <div class="row">
+     <div class="input-field col s6">
+       <input id="nameUpdate" name="nameUpdate"type="text" class="validate">
+       <label for="name">Name</label>
+     </div>
+     <div class="input-field col s3">
+       <input id="iso2Update" name="iso2Update"type="text" class="validate">
+       <label for="iso2Update">iso2</label>
+     </div>
+   </div>
+      <div class="row">
+     <div class="input-field col s9">
+       <input  id="capitalUpdate" name="capitalUpdate"type="text" class="validate">
+       <label for=code>Capital</label>
+     </div>
+   </div>
+
+      <div class="row">
+     <div class="input-field col s9">
+       <input id="continentUpdate" name="continentUpdate"type="text" class="validate">
+       <label for="name">Continent</label>
+     </div>
+   </div>
+
+      <div class="row">
+     <div class="input-field col s6">
+        <input id="regionUpdate" name="regionUpdate"type="text" class="validate">
+        <label for="name">Region</label>
+      </div>
+
+      <div class="input-field col s3">
+        <input  id="surfaceUpdate" name="surfaceUpdate" type="text" class="validate">
+        <label for=code>Surface Area</label>
+      </div>
+    </div>
+       <div class="row">
+
+      <div class="input-field col s9">
+        <input id="populationUpdate" name="populationUpdate"type="text" class="validate">
+        <label for="name">Population</label>
+      </div>
+
+
+  </div>
+      <div class="row">
+     <div class="input-field col s3">
+        <input id="governmentUpdate" name="governmentUpdate"type="text" class="validate">
+        <label for="name">Government</label>
+      </div>
+
+      <div class="input-field col s3">
+        <input  id="latUpdate" name="latUpdate" type="text" class="validate">
+        <label for=code>lat</label>
+      </div>
+
+
+
+      <div class="input-field col s3">
+        <input id="lngUpdate" name="lngUpdate" type="text" class="validate">
+        <label for="name">long</label>
+      </div>
+
+    </div> <div class="row">
+      <button class="btn waves-effect waves-light" type="submit" id="updateButton" name="action">Update  </button>
+      <button class="btn waves-effect waves-light" type="submit" id="deleteButton" name="action">Delete </button>
+    </div>
+    </form>
+   </div>
+
+
+
+   <div class="col s9" id="search">
+     <div class="row">
+
+<div class="input-field col s9">
+     <input type="text" id="searchInput" name="searchInput">
+     <label for="searchInput">Search</label>
+   </div>
+
+ </div>
+ <div class="row">
+
+
+     <button class="btn waves-effect waves-light" type="submit"  id="searchButton" name="action">Search </button>
+</div>
+<div class=row>
+
+
+     <button class="btn waves-effect waves-light" id="populationButton" name="action">10 largest populations  </button>
+     <button class="btn waves-effect waves-light"  id="surfaceButton" name="action">10 largest surfaces </button>
+</div>
+
+
+
+   </div>
+
+    </div>
+</div>
+
+      <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+     <script type="text/javascript" src="js/manageCountries.js" ></script>
+      <script type="text/javascript" src="js/materialize.min.js"></script>
+    </body>
+  </html>

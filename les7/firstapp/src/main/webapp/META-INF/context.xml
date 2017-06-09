@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context>
+    <Resource name="jdbc/PostgresDS"
+        url="jdbc:postgresql://localhost:5432/wac"
+        driverClassName="org.postgresql.Driver" 
+        auth="Container" 
+        type="javax.sql.DataSource"
+        username="gebruiker"
+        password="hunter2" />
+</Context>
